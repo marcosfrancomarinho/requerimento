@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/app.js" defer type="module"></script>
+    <title>Requerimentos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand border-bottom border-top border-2 ">Requerimentos <span
+                        class="text-secondary fs-6 fst-italic"> &#11146; Registro de Imóveis</span> </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2 class="text-center m-2 h1">formulário</h2>
+        </div>
+        <section class="container bg-light p-3">
+            <form>
+                <div id="solo" class="row g-1">
+                    <div class="row g-1 col-12">
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="name" id="name" placeholder="Nome completo" class="form-control">
+                            <label for="name">Nome completo</label>
+                        </div>
+                        <div class="form-floating col-md-2">
+                            <input type="tel" name="phone" id="phone" placeholder="Telefone" class="form-control">
+                            <label for="phone">Telefone</label>
+                        </div>
+                        <div class="form-floating col-md-3">
+                            <input type="number" name="cpf" id="cpf" placeholder="CPF" class="form-control">
+                            <label for="cpf">CPF</label>
+                        </div>
+                        <div class="form-floating col-md-3">
+                            <input type="text" name="register" id="register" placeholder="Documento de Identidade"
+                                class="form-control">
+                            <label for="register">Documento de Identidade</label>
+                        </div>
+                    </div>
+                    <div class="row g-1 col-12">
+                        <div class="form-floating col-md-3">
+                            <input type="number" name="cep" id="cep" placeholder="CEP" class="form-control">
+                            <label for="cep">CEP</label>
+                        </div>
+                        <div class="form-floating col-md-3">
+                            <input type="text" name="street" id="street" placeholder="Rua" class="form-control">
+                            <label for="street">Rua</label>
+                        </div>
+                        <div class="form-floating col-md-2">
+                            <input type="text" name="number" id="number" placeholder="Número" class="form-control">
+                            <label for="number">Numero</label>
+                        </div>
+                        <div class="form-floating col-md-2">
+                            <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro"
+                                class="form-control">
+                            <label for="neighborhood">Bairro</label>
+                        </div>
+                        <select name="state" id="state" class="form-select form-select-sm col-md">
+                            <option selected disabled>Estado</option>
+                            <optgroup label="Nordeste">
+                                <option value="MA">MA</option>
+                                <option value="CE">CE</option>
+                                <option value="PI">PI</option>
+                                <option value="RN">RN</option>
+                                <option value="PB">PB</option>
+                                <option value="PE">PE</option>
+                                <option value="AL">AL</option>
+                                <option value="SE">SE</option>
+                                <option value="BA">BA</option>
+                            </optgroup>
+                            <optgroup label="Norte">
+                                <option value="AC">AC</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="PA">PA</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="TO">TO</option>
+                            </optgroup>
+                            <optgroup label="Centro-Oeste">
+                                <option value="GO">GO</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="DF">DF</option>
+                            <optgroup>
+                            <optgroup label="Sudeste">
+                                <option value="SP">SP</option>
+                                <option value="RJ">RJ</option>
+                                <option value="MG">MG</option>
+                                <option value="ES">ES</option>
+                            </optgroup>
+                            <optgroup label="Sul">
+                                <option value="PR">PR</option>
+                                <option value="SC">SC</option>
+                                <option value="RS">RS</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="col-md-12 w-50  mb-1">
+                        <select id="marital_status" for="marital_status" class="form-select form-select-sm">
+                            <option selected disabled>Estado Civil</option>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="convivente">Convivente</option>
+                            <option value="divorciado">Divórciado(a)</option>
+                            <option value="viuvo">Viúvo(a)</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="spouse" class="row g-1 hide">
+                    <div class="form-floating col-md-3">
+                        <input type="text" name="name_spouse" id="name_spouse" placeholder="Nome completo"
+                            class="form-control">
+                        <label for="name_spouse">Nome da Cônjuge</label>
+                    </div>
+                    <div class="form-floating col-md-3">
+                        <input type="number" name="cpf_spouse" id="cpf_spouse" placeholder="CPF" class="form-control">
+                        <label for="cpf_spouse">CPF</label>
+                    </div>
+                    <div class="form-floating col-md-3">
+                        <input type="text" name="register_spouse" id="register_spouse"
+                            placeholder="Documento de Identidade" class="form-control">
+                        <label for="register_spouse">Documento de Identidade</label>
+                    </div>
+                    <div class="form-floating col-md-3">
+                        <input type="text" name="property_regime" id="property_regime" placeholder="Regime de Bens"
+                            class="form-control">
+                        <label for="property_regime">Regime de Bens</label>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <button type="button" class="btn text-white btn-info" data-bs-toggle="modal"
+                        data-bs-target="#content">Visualizar</button>
+                    <button type="submit" class="btn btn-success">Gerar PDF</button>
+                </div>
+                <div>
+                    
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="modal" id="content">
+                <div class="modal-dialog  modal-fullscreen ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title h3">Visualização do Formulário</div>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" id="form-datas">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, officiis voluptatibus, quam
+                            doloremque, ad veritatis deleniti laborum laboriosam quaerat error recusandae nisi fugit.
+                            Repellat optio illum repellendus? Beatae, at incidunt?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -34,22 +34,33 @@
             <form>
                 <div id="solo" class="row g-1">
                     <div class="row g-1 col-12">
-                        <div class="form-floating col-md-4">
+                        <div class="form-floating col-md-5">
                             <input type="text" name="name" id="name" placeholder="Nome completo" class="form-control">
                             <label for="name">Nome completo</label>
-                        </div>
-                        <div class="form-floating col-md-2">
-                            <input type="tel" name="phone" id="phone" placeholder="Telefone" class="form-control">
-                            <label for="phone">Telefone</label>
                         </div>
                         <div class="form-floating col-md-3">
                             <input type="number" name="cpf" id="cpf" placeholder="CPF" class="form-control">
                             <label for="cpf">CPF</label>
                         </div>
-                        <div class="form-floating col-md-3">
+                        <div class="form-floating col-md-4">
                             <input type="text" name="register" id="register" placeholder="Documento de Identidade"
                                 class="form-control">
                             <label for="register">Documento de Identidade</label>
+                        </div>
+                    </div>
+                    <div class="row g-1 col-12">
+                        <div class="form-floating col-md-4">
+                            <input type="tel" name="phone" id="phone" placeholder="Telefone" class="form-control">
+                            <label for="phone">Telefone</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="profession" id="profession" placeholder="Profissão"
+                                class="form-control">
+                            <label for="profession">Profissão</label>
                         </div>
                     </div>
                     <div class="row g-1 col-12">
@@ -129,37 +140,56 @@
                     </div>
                 </div>
                 <div id="spouse" class="row g-1 hide mb-1">
-                    <div class="form-floating col-md-4">
-                        <input type="text" name="name_spouse" id="name_spouse" placeholder="Nome completo"
-                            class="form-control">
-                        <label for="name_spouse">Nome da Cônjuge</label>
+                    <div class="col-12 row g-1">
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="name_spouse" id="name_spouse" placeholder="Nome completo"
+                                class="form-control">
+                            <label for="name_spouse">Nome do Cônjuge</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="number" name="cpf_spouse" id="cpf_spouse" placeholder="CPF"
+                                class="form-control">
+                            <label for="cpf_spouse">CPF</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="register_spouse" id="register_spouse"
+                                placeholder="Documento de Identidade" class="form-control">
+                            <label for="register_spouse">Documento de Identidade</label>
+                        </div>
                     </div>
-                    <div class="form-floating col-md-3">
-                        <input type="number" name="cpf_spouse" id="cpf_spouse" placeholder="CPF" class="form-control">
-                        <label for="cpf_spouse">CPF</label>
-                    </div>
-                    <div class="form-floating col-md-3">
-                        <input type="text" name="register_spouse" id="register_spouse"
-                            placeholder="Documento de Identidade" class="form-control">
-                        <label for="register_spouse">Documento de Identidade</label>
-                    </div>
-                    <div class="form-floating col-md-2">
-                        <input type="text" name="property_regime" id="property_regime" placeholder="Regime de Bens"
-                            class="form-control">
-                        <label for="property_regime">Regime de Bens</label>
+                    <div class="col-12 row g-1">
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="profession" id="profession" placeholder="Profissão"
+                                class="form-control">
+                            <label for="profession">Profissão</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="text" name="property_regime" id="property_regime" placeholder="Regime de Bens"
+                                class="form-control">
+                            <label for="property_regime">Regime de Bens</label>
+                        </div>
+                        <div class="form-floating col-md-4">
+                            <input type="date" name="data_property_regime" id="data_property_regime"
+                                placeholder="Data do Casamento" class="form-control">
+                            <label for="data_property_regime">Data do Casamento</label>
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div class="row g-1">
                     <textarea name="request" id="request" cols="75" placeholder="Qual a sua solicitação" rows="3"
                         class="form-control text-uppercase"></textarea>
+                    <div class="input-group">
+                        <label for="sender" class="input-group-text">Remetente</label>
+                        <input type="text" name="sender" id="sender" class="form-control text-uppercase">
+                    </div>
                 </div>
                 <div class="my-2 row justify-content-between p-2">
-                    <div class="col-5 btn-group btn-group-sm">
+                    <div class="col-md-6 col-8 btn-group btn-group-sm">
                         <button type="button" class="btn text-white btn-info" data-bs-toggle="modal"
                             data-bs-target="#content">Visualizar</button>
                         <button type="submit" class="btn btn-success">Gerar PDF</button>
                     </div>
-                    <button type="reset" class="btn btn-danger col-2">Limpar</button>
+                    <button type="reset" class="btn btn-danger col-md-3 col-4">Limpar</button>
                 </div>
             </form>
         </section>
@@ -172,9 +202,10 @@
                             <button class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body" id="form-datas">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, officiis voluptatibus, quam
-                            doloremque, ad veritatis deleniti laborum laboriosam quaerat error recusandae nisi fugit.
-                            Repellat optio illum repellendus? Beatae, at incidunt?
+                            <div class="bg-info container container">
+                                <div>ILUSTRÍSSIMO OFICIAL DA 1º ZONA DE REGISTRO DE IMÓVEIS DE IMPERATRIZ/MA</div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

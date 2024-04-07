@@ -35,12 +35,12 @@ async function apiCep(cep) {
     }
 }
 $("#cep").onblur = async function () {
-    const number = Number(this.value)
     const {
-        logradouro, bairro, uf,
-        localidade, state, city,
-        neighborhood, street
-    } = await apiCep(number)
+        logradouro, street,
+        bairro, neighborhood,
+        localidade, city,
+        uf, state,
+    } = await apiCep(Number(this.value))
     const info = [
         [logradouro, street],
         [bairro, neighborhood],

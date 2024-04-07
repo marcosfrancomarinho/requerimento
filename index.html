@@ -53,12 +53,13 @@
                         </div>
                     </div>
                     <div class="row g-1 col-12">
-                        <div class="form-floating col-md-3">
+                        <div class="form-floating col-md-2">
                             <input type="number" name="cep" id="cep" placeholder="CEP" class="form-control">
                             <label for="cep">CEP</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" name="street" id="street" placeholder="Rua" class="form-control">
+                            <input type="text" name="street" id="street" placeholder="Rua"
+                                class="form-control automatic_filling">
                             <label for="street">Rua</label>
                         </div>
                         <div class="form-floating col-md-2">
@@ -67,10 +68,15 @@
                         </div>
                         <div class="form-floating col-md-2">
                             <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro"
-                                class="form-control">
+                                class="form-control automatic_filling">
                             <label for="neighborhood">Bairro</label>
                         </div>
-                        <select name="state" id="state" class="form-select form-select-sm col-md">
+                        <div class="form-floating col-md-2">
+                            <input type="text" name="city" id="city" placeholder="Cidade"
+                                class="form-control automatic_filling">
+                            <label for="city">Cidade</label>
+                        </div>
+                        <select name="state" id="state" class="form-select form-select-sm col-md automatic_filling">
                             <option selected disabled>Estado</option>
                             <optgroup label="Nordeste">
                                 <option value="MA">MA</option>
@@ -123,7 +129,7 @@
                     </div>
                 </div>
                 <div id="spouse" class="row g-1 hide mb-1">
-                    <div class="form-floating col-md-3">
+                    <div class="form-floating col-md-4">
                         <input type="text" name="name_spouse" id="name_spouse" placeholder="Nome completo"
                             class="form-control">
                         <label for="name_spouse">Nome da Cônjuge</label>
@@ -137,7 +143,7 @@
                             placeholder="Documento de Identidade" class="form-control">
                         <label for="register_spouse">Documento de Identidade</label>
                     </div>
-                    <div class="form-floating col-md-3">
+                    <div class="form-floating col-md-2">
                         <input type="text" name="property_regime" id="property_regime" placeholder="Regime de Bens"
                             class="form-control">
                         <label for="property_regime">Regime de Bens</label>
@@ -145,7 +151,7 @@
                 </div>
                 <div>
                     <textarea name="request" id="request" cols="75" placeholder="Qual a sua solicitação" rows="3"
-                        class="form-control"></textarea>
+                        class="form-control text-uppercase"></textarea>
                 </div>
                 <div class="my-2 row justify-content-between p-2">
                     <div class="col-5 btn-group btn-group-sm">

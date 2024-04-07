@@ -14,6 +14,7 @@ $("#marital_status").onchange = function () {
     $("#spouse").classList.toggle("hide", !response)
 }
 function createRequirement() {
+    console.log(this)
     $("#form-datas").innerHTML = `
         <div>Nome: ${this.name}</div>
     `

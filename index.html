@@ -35,55 +35,61 @@
                 <div id="solo" class="row g-1">
                     <div class="row g-1 col-12">
                         <div class="form-floating col-md-5">
-                            <input type="text" name="name" id="name" placeholder="Nome completo" class="form-control">
+                            <input autocomplete="on" type="text" name="name" id="name" placeholder="Nome completo"
+                                class="form-control">
                             <label for="name">Nome completo</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="number" name="cpf" id="cpf" placeholder="CPF" class="form-control">
-                            <label for="cpf">CPF</label>
+                            <input autocomplete="on" type="number" name="cpf" id="cpf" placeholder="CPF"
+                                class="form-control">
+                            <label for="cpf">CPF/CNPJ</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" name="register" id="register" placeholder="Documento de Identidade"
-                                class="form-control">
+                            <input autocomplete="on" type="text" name="register" id="register"
+                                placeholder="Documento de Identidade" class="form-control">
                             <label for="register">Documento de Identidade</label>
                         </div>
                     </div>
                     <div class="row g-1 col-12">
                         <div class="form-floating col-md-4">
-                            <input type="tel" name="phone" id="phone" placeholder="Telefone" class="form-control">
+                            <input autocomplete="on" type="tel" name="phone" id="phone" placeholder="Telefone"
+                                class="form-control">
                             <label for="phone">Telefone</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                            <input autocomplete="on" type="email" name="email" id="email" placeholder="Email"
+                                class="form-control">
                             <label for="email">Email</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" name="profession" id="profession" placeholder="Profissão"
-                                class="form-control">
+                            <input autocomplete="on" type="text" name="profession" id="profession"
+                                placeholder="Profissão" class="form-control">
                             <label for="profession">Profissão</label>
                         </div>
                     </div>
                     <div class="row g-1 col-12">
                         <div class="form-floating col-md-2">
-                            <input type="number" name="cep" id="cep" placeholder="CEP" class="form-control">
+                            <input autocomplete="on" type="number" name="cep" id="cep" placeholder="CEP"
+                                class="form-control">
                             <label for="cep">CEP</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" name="street" id="street" placeholder="Rua"
+                            <input autocomplete="on" type="text" name="street" id="street" placeholder="Rua"
                                 class="form-control automatic_filling">
                             <label for="street">Rua</label>
                         </div>
                         <div class="form-floating col-md-2">
-                            <input type="text" name="number" id="number" placeholder="Número" class="form-control">
+                            <input autocomplete="on" type="text" name="number" id="number" placeholder="Número"
+                                class="form-control">
                             <label for="number">Numero</label>
                         </div>
                         <div class="form-floating col-md-2">
-                            <input type="text" name="neighborhood" id="neighborhood" placeholder="Bairro"
-                                class="form-control automatic_filling">
+                            <input autocomplete="on" type="text" name="neighborhood" id="neighborhood"
+                                placeholder="Bairro" class="form-control automatic_filling">
                             <label for="neighborhood">Bairro</label>
                         </div>
                         <div class="form-floating col-md-2">
-                            <input type="text" name="city" id="city" placeholder="Cidade"
+                            <input autocomplete="on" type="text" name="city" id="city" placeholder="Cidade"
                                 class="form-control automatic_filling">
                             <label for="city">Cidade</label>
                         </div>
@@ -129,7 +135,7 @@
                         </select>
                     </div>
                     <div class="col-md-12 w-50  mb-1">
-                        <select id="marital_status" for="marital_status" class="form-select form-select-sm">
+                        <select id="status" for="status" name="status" class="form-select form-select-sm">
                             <option selected disabled>Estado Civil</option>
                             <option value="solteiro">Solteiro(a)</option>
                             <option value="casado">Casado(a)</option>
@@ -142,36 +148,36 @@
                 <div id="spouse" class="row g-1 hide mb-1">
                     <div class="col-12 row g-1">
                         <div class="form-floating col-md-4">
-                            <input type="text" name="name_spouse" id="name_spouse" placeholder="Nome completo"
-                                class="form-control">
+                            <input autocomplete="on" type="text" name="name_spouse" id="name_spouse"
+                                placeholder="Nome completo" class="form-control">
                             <label for="name_spouse">Nome do Cônjuge</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="number" name="cpf_spouse" id="cpf_spouse" placeholder="CPF"
+                            <input autocomplete="on" type="number" name="cpf_spouse" id="cpf_spouse" placeholder="CPF"
                                 class="form-control">
                             <label for="cpf_spouse">CPF</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" name="register_spouse" id="register_spouse"
+                            <input autocomplete="on" type="text" name="register_spouse" id="register_spouse"
                                 placeholder="Documento de Identidade" class="form-control">
                             <label for="register_spouse">Documento de Identidade</label>
                         </div>
                     </div>
                     <div class="col-12 row g-1">
                         <div class="form-floating col-md-4">
-                            <input type="text" name="profession" id="profession" placeholder="Profissão"
-                                class="form-control">
-                            <label for="profession">Profissão</label>
+                            <input autocomplete="on" type="text" name="profession_spouse" id="profession_spouse"
+                                placeholder="Profissão" class="form-control">
+                            <label for="profession_spouse">Profissão</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" name="property_regime" id="property_regime" placeholder="Regime de Bens"
-                                class="form-control">
+                            <input autocomplete="on" type="text" name="property_regime" id="property_regime"
+                                placeholder="Regime de Bens" class="form-control">
                             <label for="property_regime">Regime de Bens</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="date" name="data_property_regime" id="data_property_regime"
+                            <input autocomplete="on" type="date" name="data_wedding" id="data_wedding"
                                 placeholder="Data do Casamento" class="form-control">
-                            <label for="data_property_regime">Data do Casamento</label>
+                            <label for="data_wedding">Data do Casamento</label>
                         </div>
                     </div>
                 </div>
@@ -180,7 +186,8 @@
                         class="form-control text-uppercase"></textarea>
                     <div class="input-group">
                         <label for="sender" class="input-group-text">Remetente</label>
-                        <input type="text" name="sender" id="sender" class="form-control text-uppercase">
+                        <input autocomplete="on" type="text" name="sender" id="sender"
+                            class="form-control text-uppercase">
                     </div>
                 </div>
                 <div class="my-2 row justify-content-between p-2">
@@ -198,13 +205,34 @@
                 <div class="modal-dialog  modal-fullscreen ">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="modal-title h3">Visualização do Formulário</div>
+                            <div class="modal-title h3">Visualização do Requerimento </div>
                             <button class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body" id="form-datas">
-                            <div class="bg-info container container">
-                                <div>ILUSTRÍSSIMO OFICIAL DA 1º ZONA DE REGISTRO DE IMÓVEIS DE IMPERATRIZ/MA</div>
-
+                            <div class="bg-light container" id="form_data">
+                                <div>ILUSTRÍSSIMO <span id="data_sender"></span></div>
+                                <div>Nome: <span id="data_name"></span> </div>
+                                <div>CPF/CNPJ: <span id="data_cpf"></span> </div>
+                                <div>RG: <span id="data_register"></span> </div>
+                                <div>Telefone: <span id="data_phone"></span> </div>
+                                <div>Email: <span id="data_email"></span> </div>
+                                <div>Profissão: <span id="data_profession"></span> </div>
+                                <div>CEP: <span id="data_cep"></span> </div>
+                                <div>Rua: <span id="data_street"></span> </div>
+                                <div>numero: <span id="data_number"></span> </div>
+                                <div>Bairro: <span id="data_neighborhood"></span> </div>
+                                <div>Cidade: <span id="data_city"></span> </div>
+                                <div>Estado: <span id="data_state"></span> </div>
+                                <div>Nome do Cônjuge: <span id="data_name_spouse"></span> </div>
+                                <div>CPF/CNPJ: <span id="data_cpf_spouse"></span> </div>
+                                <div>RG: <span id="data_register_spouse"></span> </div>
+                                <div>Profissão: <span id="data_profession_spouse"></span> </div>
+                                <div>Regime de Bens: <span id="data_property_regime"></span> </div>
+                                <div>Estado Cívil: <span id="data_status"></span> </div>
+                                <div>Data do Casamento: <span id="data_data_wedding"></span> </div>
+                                <div>Por meio do presente requerimento venho a Vosssa Senhoria Requerer:
+                                    <span id="data_request"></span>
+                                </div>
                             </div>
                         </div>
                     </div>

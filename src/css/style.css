@@ -13,3 +13,11 @@
 .hide {
     display: none;
 }
+
+input {
+    text-transform: uppercase;
+}
+
+input[type=email] {
+    text-transform: lowercase
+}

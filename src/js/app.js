@@ -5,20 +5,15 @@ const $ = selector => {
 $("form").onsubmit = function (event) {
     event.preventDefault()
     const formData = Object.fromEntries(new FormData(this))
-    createRequirement.bind(formData)()
+    createForm.bind(formData)()
 }
-$("#marital_status").onchange = function () {
+$("#status").onchange = function () {
     const response = ["casado", "convivente"].some(status => {
         return status === this.value
     })
     $("#spouse").classList.toggle("hide", !response)
 }
-function createRequirement() {
-    console.log(this)
-    $("#form-datas").innerHTML = `
-        <div>Nome: ${this.name}</div>
-    `
-}
+
 async function api_1(cep) {
     const url_1 = `https://viacep.com.br/ws/${cep}/json/`
     return await fetch(url_1)
@@ -49,5 +44,11 @@ $("#cep").onblur = async function () {
     ]
     $(".automatic_filling").forEach((elment, idx) => {
         elment.value = info[idx][0] ?? info[idx][1]
+    })
+}
+function createForm() {
+    Object.keys(this).forEach(key => {
+        const value = $("#" + key).value
+        $("#data_" + key).innerText = key !== "email" ? value.toUpperCase() : value.toLowerCase()
     })
 }
